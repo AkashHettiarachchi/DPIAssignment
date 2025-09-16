@@ -1,0 +1,7 @@
+## Reflection Note
+
+In the process of doing so, I needed to study how the SOCKS5 protocol operates and in particular to understand the handshake mechanism defined in [RFC 1928] and the authentication mechanism presented in [RFC 1929]. My previous understanding of proxies was a general one, and thus I needed to read carefully about the various fields within the protocol like VER, NMETHODS, ATYP, and the exchange of authentication between the client and server. This made me realize why most of the implementations just take the CONNECT command rather than the BIND or UDP options which are more advanced.
+
+To create a debug, I have begun with the running of the proxy and tested it using curl. Initially, I made mistakes like connection refused and user was rejected. My monitoring of the server logs and comparing the username/ password environment allowed me to deduce errors in the environment configuration and the authentication errors. There was a lot easier debugging as the small commands such as curl were tested incrementally.
+
+Given more time, I would enhance this project by including support of additional features of the SOCKS5 protocol, including UDP forwarding and improved error handling. I would also containerize the server using Docker, unit tests, and timed and level log logs. This would render the proxy more production ready, scalable and easier to roll out.
