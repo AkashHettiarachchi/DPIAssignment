@@ -7,10 +7,10 @@ A minimal SOCKS5 proxy implementation with username/password authentication (RFC
 
 ## Features
 - Accepts incoming SOCKS5 client connections
-- Supports only `CONNECT` command (TCP tunneling)
+- Supports only CONNECT command (TCP tunneling)
 - Username/password authentication
 - Logs source → destination connections
-- Configurable via environment variables or `config.json`
+- Configurable via environment variables or config.json
 
 ## How to Run
 
